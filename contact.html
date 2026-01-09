@@ -1,0 +1,565 @@
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Talent Systems - Contact Us</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "primary-glow": "rgba(19, 182, 236, 0.5)",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#050505",
+                        "surface-dark": "#0b1215",
+                        "surface-light": "#162026",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Space Grotesk", "sans-serif"],
+                        "mono": ["monospace"], // Fallback for technical data
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "2xl": "1rem", "full": "9999px" },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, rgba(19, 182, 236, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(19, 182, 236, 0.03) 1px, transparent 1px)",
+                    },
+                    boxShadow: {
+                        'neon': '0 0 5px theme("colors.primary"), 0 0 20px theme("colors.primary-glow")',
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .bg-tech-grid {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0b1215;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #233f48;
+            border-radius: 3px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #13b6ec;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(19, 182, 236, 0.3);
+        }
+
+        @keyframes scan {
+            0% {
+                top: 0%;
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        .scan-line {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #13b6ec;
+            box-shadow: 0 0 10px #13b6ec;
+            animation: scan 4s linear infinite;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-white font-display overflow-x-hidden selection:bg-primary selection:text-black">
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-[#233f48] bg-surface-dark/30 backdrop-blur-md">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="images/logo-talent-systems.svg" alt="Talent Systems Logo" class="h-10 w-auto">
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors uppercase tracking-wider"
+                    href="index.html#technologies-section">Technologies</a>
+                <a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors uppercase tracking-wider"
+                    href="index.html#machines-section">Machines</a>
+                <a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors uppercase tracking-wider"
+                    href="index.html#process-section">Process</a>
+                <a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors uppercase tracking-wider"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="text-gray-400 hover:text-white text-xs font-bold transition-colors">EN <span
+                        class="text-gray-600 mx-1">/</span> IT</button>
+                <a class="hidden lg:flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-wide border border-primary/30 px-4 py-2 rounded hover:bg-primary hover:text-black transition-all"
+                    href="#">
+                    <span>Contact Sales</span>
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="relative min-h-screen w-full flex flex-col pt-20 bg-background-dark bg-tech-grid">
+        <div
+            class="fixed top-20 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none">
+        </div>
+        <div
+            class="fixed bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[100px] rounded-full pointer-events-none">
+        </div>
+        <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 py-12 lg:py-20 w-full flex-1 flex flex-col">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start pb-20">
+                <!-- Left Column: Header & Contacts -->
+                <div class="flex flex-col gap-16">
+                    <!-- Header Block -->
+                    <div>
+                        <div
+                            class="flex items-center gap-3 text-primary font-mono text-[10px] tracking-[0.3em] uppercase opacity-70 mb-6 animate-pulse">
+                            <span class="w-2 h-2 bg-primary rounded-full"></span>
+                            <span>System Status: Online</span>
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl font-bold text-white tracking-tighter mb-6">
+                            ENGINEERING <br /> <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">EXCELLENCE</span>
+                        </h1>
+                        <p class="text-gray-400 text-lg lg:text-xl font-light leading-relaxed max-w-xl">
+                            Reach our Turin headquarters for advanced robotics consultation and Industry 4.0
+                            integration. We
+                            engineer the future of automation.
+                        </p>
+                    </div>
+
+                    <!-- Contacts Block -->
+                    <div class="flex flex-col gap-8">
+                        <div class="grid gap-4">
+                            <div
+                                class="group p-6 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/40 transition-all duration-300 relative overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="flex items-start gap-5 relative z-10">
+                                    <div
+                                        class="w-10 h-10 rounded bg-[#162026] flex items-center justify-center text-primary border border-white/5 group-hover:scale-110 transition-transform duration-300">
+                                        <span class="material-symbols-outlined">factory</span>
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">
+                                            Headquarters</h3>
+                                        <p class="text-white text-lg font-medium leading-snug">Via dell'Automazione 42
+                                        </p>
+                                        <p class="text-gray-400 font-light">10156 Turin (TO), ITALY</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="group p-6 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/40 transition-all duration-300 relative overflow-hidden"
+                                href="mailto:contact@talentsystems.com">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="flex items-start gap-5 relative z-10">
+                                    <div
+                                        class="w-10 h-10 rounded bg-[#162026] flex items-center justify-center text-primary border border-white/5 group-hover:scale-110 transition-transform duration-300">
+                                        <span class="material-symbols-outlined">mail</span>
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">
+                                            Digital Inquiry</h3>
+                                        <p class="text-white text-lg font-medium">contact@talentsystems.com</p>
+                                        <p class="text-gray-400 font-light text-sm mt-1 flex items-center gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                                            Replies within 24h
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="group p-6 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/40 transition-all duration-300 relative overflow-hidden"
+                                href="tel:+390119876543">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+                                <div class="flex items-start gap-5 relative z-10">
+                                    <div
+                                        class="w-10 h-10 rounded bg-[#162026] flex items-center justify-center text-primary border border-white/5 group-hover:scale-110 transition-transform duration-300">
+                                        <span class="material-symbols-outlined">call</span>
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">
+                                            Direct Line</h3>
+                                        <p class="text-white text-lg font-medium">+39 011 987 6543</p>
+                                        <p class="text-gray-400 font-light text-sm mt-1">Mon-Fri, 08:30 - 18:30 CET</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="relative w-full h-64 bg-[#080c0f] rounded-xl border border-white/10 overflow-hidden group">
+                            <div class="absolute inset-0 opacity-20"
+                                style="background-image: linear-gradient(#13b6ec 1px, transparent 1px), linear-gradient(90deg, #13b6ec 1px, transparent 1px); background-size: 20px 20px;">
+                            </div>
+                            <div class="scan-line opacity-50"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <svg class="w-full h-full opacity-80" preserveAspectRatio="xMidYMid slice"
+                                    viewBox="0 0 400 200">
+                                    <path d="M50 100 L350 100" stroke="#233f48" stroke-width="0.5"></path>
+                                    <path d="M200 20 L200 180" stroke="#233f48" stroke-width="0.5"></path>
+                                    <circle cx="200" cy="100" fill="none" r="30" stroke="#13b6ec" stroke-opacity="0.2">
+                                    </circle>
+                                    <circle cx="200" cy="100" fill="none" r="60" stroke="#13b6ec" stroke-opacity="0.1">
+                                    </circle>
+                                    <circle cx="200" cy="100" fill="#13b6ec" r="4">
+                                        <animate attributeName="r" dur="2s" repeatCount="indefinite" values="4;6;4">
+                                        </animate>
+                                    </circle>
+                                    <circle cx="200" cy="100" fill="none" r="10" stroke="#13b6ec" stroke-opacity="0.6"
+                                        stroke-width="1.5">
+                                        <animate attributeName="r" dur="1.5s" repeatCount="indefinite" values="10;25">
+                                        </animate>
+                                        <animate attributeName="stroke-opacity" dur="1.5s" repeatCount="indefinite"
+                                            values="0.6;0"></animate>
+                                    </circle>
+                                    <rect fill="#050505" fill-opacity="0.8" height="24" rx="2" stroke="#13b6ec"
+                                        stroke-width="0.5" width="80" x="220" y="80"></rect>
+                                    <text fill="#fff" font-family="monospace" font-size="10" x="230"
+                                        y="96">TURIN_HQ</text>
+                                </svg>
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-3 bg-black/60 backdrop-blur border-t border-white/5 flex justify-between items-center">
+                                <span class="text-[10px] font-mono text-primary uppercase tracking-wider">Live Satellite
+                                    Feed</span>
+                                <span class="text-[10px] text-gray-500">45.0703° N, 7.6869° E</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Form -->
+                <div class="lg:col-span-1">
+                    <form
+                        class="relative overflow-hidden bg-surface-dark/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl group">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50">
+                        </div>
+                        <div class="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-primary/30"></div>
+                        <div class="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-primary/30"></div>
+                        <div class="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-primary/30"></div>
+                        <div class="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-primary/30"></div>
+                        <div class="flex items-center justify-between mb-10 border-b border-white/5 pb-6">
+                            <div>
+                                <h2 class="text-2xl font-bold text-white mb-1">Compose Message</h2>
+                                <p class="text-sm text-gray-400">Secure transmission to Engineering Dept.</p>
+                            </div>
+                            <div class="hidden sm:block">
+                                <div
+                                    class="px-3 py-1 bg-primary/10 border border-primary/20 rounded text-[10px] font-mono text-primary animate-pulse">
+                                    ENCRYPTED_SSL
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div class="space-y-2 group/input">
+                                <label
+                                    class="text-xs font-mono text-gray-400 uppercase tracking-widest pl-1 group-focus-within/input:text-primary transition-colors">Full
+                                    Name <span class="text-primary">*</span></label>
+                                <div class="relative">
+                                    <input
+                                        class="w-full bg-[#080c0f] border border-[#233f48] rounded px-4 py-3.5 text-white placeholder-gray-700 focus:border-primary focus:shadow-[0_0_15px_rgba(19,182,236,0.1)] outline-none transition-all duration-300"
+                                        placeholder="John Doe" required="" type="text" />
+                                    <div
+                                        class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-500 group-focus-within/input:w-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2 group/input">
+                                <label
+                                    class="text-xs font-mono text-gray-400 uppercase tracking-widest pl-1 group-focus-within/input:text-primary transition-colors">Company</label>
+                                <div class="relative">
+                                    <input
+                                        class="w-full bg-[#080c0f] border border-[#233f48] rounded px-4 py-3.5 text-white placeholder-gray-700 focus:border-primary focus:shadow-[0_0_15px_rgba(19,182,236,0.1)] outline-none transition-all duration-300"
+                                        placeholder="Organization" type="text" />
+                                    <div
+                                        class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-500 group-focus-within/input:w-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div class="space-y-2 group/input">
+                                <label
+                                    class="text-xs font-mono text-gray-400 uppercase tracking-widest pl-1 group-focus-within/input:text-primary transition-colors">Email
+                                    <span class="text-primary">*</span></label>
+                                <div class="relative">
+                                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600">
+                                        <span class="material-symbols-outlined text-lg">alternate_email</span>
+                                    </div>
+                                    <input
+                                        class="w-full bg-[#080c0f] border border-[#233f48] rounded pl-12 pr-4 py-3.5 text-white placeholder-gray-700 focus:border-primary focus:shadow-[0_0_15px_rgba(19,182,236,0.1)] outline-none transition-all duration-300"
+                                        placeholder="email@company.com" required="" type="email" />
+                                    <div
+                                        class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-500 group-focus-within/input:w-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2 group/input">
+                                <label
+                                    class="text-xs font-mono text-gray-400 uppercase tracking-widest pl-1 group-focus-within/input:text-primary transition-colors">Phone</label>
+                                <div class="relative">
+                                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600">
+                                        <span class="material-symbols-outlined text-lg">call</span>
+                                    </div>
+                                    <input
+                                        class="w-full bg-[#080c0f] border border-[#233f48] rounded pl-12 pr-4 py-3.5 text-white placeholder-gray-700 focus:border-primary focus:shadow-[0_0_15px_rgba(19,182,236,0.1)] outline-none transition-all duration-300"
+                                        placeholder="+1 (555) 000-0000" type="tel" />
+                                    <div
+                                        class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-500 group-focus-within/input:w-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-10 group/input">
+                            <label
+                                class="text-xs font-mono text-gray-400 uppercase tracking-widest pl-1 group-focus-within/input:text-primary transition-colors">Project
+                                Details</label>
+                            <div class="relative">
+                                <textarea
+                                    class="w-full bg-[#080c0f] border border-[#233f48] rounded px-4 py-4 text-white placeholder-gray-700 focus:border-primary focus:shadow-[0_0_15px_rgba(19,182,236,0.1)] outline-none transition-all duration-300 custom-scrollbar resize-none"
+                                    placeholder="Describe your automation requirements, technical specs, or general inquiry..."
+                                    rows="6"></textarea>
+                                <div class="absolute bottom-2 right-2 text-[10px] text-gray-600 font-mono">MAX 2000
+                                    CHARS</div>
+                                <div
+                                    class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-500 group-focus-within/input:w-full">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4 border-t border-white/5">
+                            <label class="flex items-center gap-3 cursor-pointer group/check select-none">
+                                <div class="relative flex items-center">
+                                    <input
+                                        class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-[#233f48] bg-[#080c0f] transition-all checked:border-primary checked:bg-primary/20 hover:border-primary/50"
+                                        required="" type="checkbox" />
+                                    <span
+                                        class="material-symbols-outlined absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-sm text-primary opacity-0 transition-opacity peer-checked:opacity-100">check</span>
+                                </div>
+                                <span class="text-xs text-gray-500 group-hover/check:text-gray-400 transition-colors">I
+                                    consent to the processing of personal data.</span>
+                            </label>
+                            <button
+                                class="relative w-full md:w-auto overflow-hidden group/btn bg-primary px-8 py-4 rounded text-background-dark font-bold uppercase tracking-wider transition-all duration-300 hover:shadow-[0_0_20px_rgba(19,182,236,0.4)]"
+                                type="submit">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    <span>Transmit Request</span>
+                                    <span
+                                        class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">send</span>
+                                </span>
+                                <div
+                                    class="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300">
+                                </div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="relative w-full border-t border-[#233f48] bg-[#020303] text-gray-400">
+        <div class="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none"></div>
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-16 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                <div class="lg:col-span-1 flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="images/logo-talent-systems.svg" alt="Talent Systems Logo"
+                            class="h-8 w-auto group-hover:opacity-80 transition-opacity">
+                    </a>
+                    <p class="text-sm font-light leading-relaxed max-w-xs text-gray-500">
+                        Pioneering industrial robotics for the ceramic sector. Precision engineering, Italian design,
+                        global reach.
+                    </p>
+                    <div
+                        class="flex items-center gap-2 text-sm font-mono text-primary uppercase tracking-widest mt-auto">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        <span>Systems Online</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+                        <span class="w-4 h-[1px] bg-primary"></span> Contact
+                    </h3>
+                    <ul class="space-y-4 text-sm font-light">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+                            <span>Via della Meccanica, 12<br />10129 Torino (TO) - ITALY</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            <a class="hover:text-white transition-colors" href="#">info@talentsystems.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            <a class="hover:text-white transition-colors" href="#">+39 011 937 51 09</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+                        <span class="w-4 h-[1px] bg-primary"></span> Explore
+                    </h3>
+                    <ul class="space-y-3 text-base">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#"><span
+                                    class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all duration-300 text-primary">chevron_right</span>
+                                Technologies</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#"><span
+                                    class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all duration-300 text-primary">chevron_right</span>
+                                Machines</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#"><span
+                                    class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all duration-300 text-primary">chevron_right</span>
+                                Process</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#"><span
+                                    class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all duration-300 text-primary">chevron_right</span>
+                                Global Network</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+                        <span class="w-4 h-[1px] bg-primary"></span> Follow Us
+                    </h3>
+                    <div class="flex gap-4">
+                        <a class="w-12 h-12 border border-[#233f48] bg-surface-dark/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(19,182,236,0.3)] transition-all duration-300 rounded group"
+                            href="#">
+                            <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="w-12 h-12 border border-[#233f48] bg-surface-dark/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(19,182,236,0.3)] transition-all duration-300 rounded group"
+                            href="#">
+                            <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="w-12 h-12 border border-[#233f48] bg-surface-dark/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(19,182,236,0.3)] transition-all duration-300 rounded group"
+                            href="#">
+                            <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#233f48]/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm text-gray-600 font-mono">© 2024 Talent Systems S.p.A. <span
+                        class="hidden md:inline mx-2">|</span> VAT: IT1234567890</p>
+                <div class="flex gap-6">
+                    <a class="text-sm text-gray-600 hover:text-primary transition-colors font-mono uppercase tracking-wider"
+                        href="#">Privacy Policy</a>
+                    <a class="text-sm text-gray-600 hover:text-primary transition-colors font-mono uppercase tracking-wider"
+                        href="#">Cookie Policy</a>
+                    <a class="text-sm text-gray-600 hover:text-primary transition-colors font-mono uppercase tracking-wider"
+                        href="#">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Page Transition
+            document.body.classList.add('loaded');
+
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', e => {
+                    const href = link.getAttribute('href');
+                    const target = link.getAttribute('target');
+
+                    if (href &&
+                        !href.startsWith('#') &&
+                        !href.startsWith('mailto:') &&
+                        !href.startsWith('tel:') &&
+                        target !== '_blank') {
+
+                        const url = new URL(href, window.location.href);
+                        // If navigating to a different page
+                        if (url.origin === window.location.origin && url.pathname !== window.location.pathname) {
+                            e.preventDefault();
+                            document.body.classList.remove('loaded');
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 500);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
